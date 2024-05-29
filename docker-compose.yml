@@ -49,7 +49,7 @@ services:
             dockerfile: Dockerfile
         volumes:
             - ./backend/:/app
-            - ./dados/:/app/dados/
+            - /home/SRV-VLACloud/nextcloud/data/:/app/dados/
         working_dir: /app
         command: tail -f /dev/null
         networks:
