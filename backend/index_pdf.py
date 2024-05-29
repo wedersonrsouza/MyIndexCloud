@@ -3,13 +3,11 @@ import fitz
 
 def extract_text_from_image_pdf(pdf_path):
     try:
-        
         pdf_document = fitz.open(pdf_path)
         text = ""
         for page in pdf_document: # iterate the document pages
-            text += page.getText() # get plain text encoded as UTF-8
-            
-        # print(text)
+            text += page.get_text() # get plain text encoded as UTF-8
+        
         return text
     except Exception as e:
         return f"Erro ao extrair texto: {str(e)}"
