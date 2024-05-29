@@ -6,3 +6,4 @@ PyMuPDF
 pytesseract
 python-docx
 torch
+docx2txt

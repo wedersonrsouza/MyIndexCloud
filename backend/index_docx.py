@@ -1,7 +1,7 @@
 import os
 import re
 import uuid
-
+import docx2txt
 from docx import Document
 from elasticsearch import Elasticsearch
 
@@ -27,8 +27,14 @@ from elasticsearch import Elasticsearch
 
 
 def read_docx(file_path):
-    doc = Document(file_path)
-    result = ' '.join([p.text for p in doc.paragraphs])
-    return result
+    
+    if str(file_path).endswith('.docx'):
+        doc = Document(file_path)
+        result = ' '.join([p.text for p in doc.paragraphs])
+        return result
+    elif str(file_path).endswith('.doc'):
+        text = docx2txt.process(file_path)
+        return text
+        
 
 
