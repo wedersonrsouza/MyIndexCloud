@@ -6,7 +6,7 @@ const Search = () => {
   const [results, setResults] = useState([]);
 
   const search = async () => {
-    const response = await axios.get('http://elasticsearch:9200/_search', {
+    const response = await axios.get('http://10.69.21.247:9292/_search', {
       params: {
         q: term
       },
