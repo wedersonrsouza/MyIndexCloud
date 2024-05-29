@@ -70,6 +70,6 @@ volumes:
     esdata2:
         driver: local
 networks:
-    cloud:
+    my_index_cloud:
         name: my_index_cloud
         driver: bridge
