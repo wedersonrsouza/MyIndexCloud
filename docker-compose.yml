@@ -81,7 +81,7 @@ services:
         image: osixia/openldap
         environment:
             LDAP_ORGANISATION: "VLA Cloud"
-            LDAP_DOMAIN: "localhost"
+            LDAP_DOMAIN: "dpf.vla"
             LDAP_ADMIN_PASSWORD: "admin"
         volumes:
             - ldap_data:/var/lib/ldap
