@@ -72,18 +72,18 @@ services:
             - db_data:/var/lib/mysql
         restart: always
         environment:
-            - MYSQL_ROOT_PASSWORD: password
-            - MYSQL_DATABASE: ldap
-            - MYSQL_USER: ldap
-            - MYSQL_PASSWORD: ldap
+            MYSQL_ROOT_PASSWORD: password
+            MYSQL_DATABASE: ldap
+            MYSQL_USER: ldap
+            MYSQL_PASSWORD: ldap
 
     ldap:
         image: osixia/openldap
         environment:
-            - LDAP_ORGANISATION: "VLA Cloud"
-            - LDAP_DOMAIN: "vla.com"
-            - LDAP_ADMIN_PASSWORD: "admin"
-            - LDAP_CONFIG_PASSWORD: "config"
+            LDAP_ORGANISATION: "VLA Cloud"
+            LDAP_DOMAIN: "vla.com"
+            LDAP_ADMIN_PASSWORD: "admin"
+            LDAP_CONFIG_PASSWORD: "config"
         volumes:
             - ldap_data:/var/lib/ldap
             - ldap_config:/etc/ldap/slapd.d

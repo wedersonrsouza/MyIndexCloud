@@ -10,6 +10,7 @@ import docx
 from docx.document import Document
 from docx.opc.coreprops import CoreProperties
 from openpyxl import load_workbook
+from hashlib import sha256
 
 from concurrent.futures import ThreadPoolExecutor
 
